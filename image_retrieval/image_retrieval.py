@@ -8,6 +8,8 @@
 
 """
 import os
+import sys
+
 import numpy as np
 import tensorflow as tf
 from sklearn.neighbors import NearestNeighbors
@@ -17,8 +19,13 @@ from src.CV_transform_utils import resize_img, normalize_img
 from src.CV_plot_utils import plot_query_retrieval, plot_tsne, plot_reconstructions
 from src.autoencoder import AutoEncoder
 
+
+# main
+param_1= sys.argv[1] 
+
+print 'modelName=', param_1
 # Run mode: (autoencoder -> simpleAE, convAE) or (transfer learning -> vgg19)
-modelName = "convAE"  # try: "simpleAE", "convAE", "vgg19"
+modelName = param_1  # try: "simpleAE", "convAE", "vgg19"
 trainModel = True
 parallel = True  # use multicore processing
 
