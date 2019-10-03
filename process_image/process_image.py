@@ -65,6 +65,7 @@ settings = {
 }
 
 # Run our tools
-process_image(settings=settings,
-              imgFile=os.path.join(os.getcwd(), "input", "squirrel.jpeg"),
+for filename in os.listdir(os.path.join(os.getcwd(), "input"):
+     process_image(settings=settings,
+              imgFile=os.path.join(os.getcwd(), "input", filename),
               outDir=os.path.join(os.getcwd(), "output"))
