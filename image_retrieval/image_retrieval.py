@@ -23,7 +23,7 @@ from src.autoencoder import AutoEncoder
 # main
 param_1= sys.argv[1] 
 
-print 'modelName=', param_1
+print ('modelName=', param_1)
 # Run mode: (autoencoder -> simpleAE, convAE) or (transfer learning -> vgg19)
 modelName = param_1  # try: "simpleAE", "convAE", "vgg19"
 trainModel = True
